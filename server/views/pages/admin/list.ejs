@@ -1,0 +1,28 @@
+<div class="container-xxl">
+    <table id="adminData" class="table table-row-bordered gs-7 gy-7 gx-7">
+        <thead>
+            <tr class="fw-semibold fs-6 text-muted">
+                <th>ID</th>
+                <th>Name</th>
+                <th>E-Mail</th>
+                <th>Role</th>
+                <th>Last Login</th>
+                <th>Account Status</th>
+                <th class="text-center min-w-100px">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let admin of admins) { %>
+                <tr>
+                  <td><%= admin.id %></td>
+                  <td><%= admin.name %></td>
+                  <td><%= admin.email %></td>
+                  <td><%= admin.role %></td>
+                  <td><%= admin.lastLogin %></td>
+                  <td><%= admin.isActive %></td>
+                  <td><a class="btn btn-primary" href="/<%= admin.id %>">Details</a></td>
+                </tr>
+             <% } %>
+        </tbody>
+    </table>  
+</div>

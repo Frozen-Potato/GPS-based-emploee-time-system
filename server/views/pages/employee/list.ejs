@@ -1,0 +1,26 @@
+<div class="container-xxl">
+    <table id="employeeData" class="table table-row-bordered gs-7 gy-7 gx-7">
+        <thead>
+            <tr class="fw-semibold fs-6 text-muted">
+                <th>ID</th>
+                <th>Name</th>
+                <th>E-Mail</th>
+                <th>Last Login</th>
+                <th>Account Status</th>
+                <th class="text-center min-w-100px">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let employee of employees) { %>
+                <tr>
+                  <td><%= employee.id %></td>
+                  <td><%= employee.name %></td>
+                  <td><%= employee.email %></td>
+                  <td><%= employee.lastLogin %></td>
+                  <td><%= employee.isActive %></td>
+                  <td><a class="btn btn-primary" href="/<%= employee.id %>">Details</a></td>
+                </tr>
+             <% } %>
+        </tbody>
+    </table>  
+</div>

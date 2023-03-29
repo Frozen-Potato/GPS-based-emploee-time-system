@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html land="en">
+    <!--begin::Head-->
+    <%- include('layouts/header/_html_header') %>
+    <%- include('layouts/header/_header') %>
+    <!--end::Head-->
+    <!--begin::Body-->
+    <body>        
+        <%- include('layouts/master')  %>
+        <!--begin::Javascript-->
+		<script>var hostUrl = "/assets/";</script>
+		<!--begin::Global Javascript Bundle(used by all pages)-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <link href="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.css" rel="stylesheet"/>        
+        <script src="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.js"></script>
+
+        <!--begin::Page Custom Javascript(used by this page)-->
+		<% if(typeof view == 'string') { %>
+			<% console.log(view) %>
+			<% if(view === 'sample') { %>
+
+            <% } %>	
+            <% if(view === 'admin/list') { %>
+                <script src="/assets/js/pages/admin/list.js"></script>
+            <% } %>	
+            <% if(view === 'employee/list') { %>
+                <script src="/assets/js/pages/employee/list.js"></script>
+            <% } %>	
+        <% } %>
+    </body>
+    <!--end:Body-->
+    <%- include('layouts/footer/_footer') %>
+</html>

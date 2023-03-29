@@ -1,0 +1,11 @@
+<!--Main layout-->
+  <main style="min-height: calc(100vh - 58px);">
+    <div class="container pt-4">
+        <% if(typeof view == 'string' && view.length > 0){ %>
+            <%- include('../pages/' + view) %>
+        <% } else { %>
+            <%- include('../pages/default') %>
+        <% } %>
+    </div>
+  </main>
+<!--Main layout-->
