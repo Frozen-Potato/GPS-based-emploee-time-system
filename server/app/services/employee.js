@@ -12,6 +12,12 @@ class EmployeeServices {
     return rows.length ? camelize(rows) : []
   }
 
+  async getPasswordfromEmail(email){
+    const sql = `SELECT * FROM employee WHERE email = ?`
+    const [rows, fields] = await this.pool.query(sql, [email]);
+    return rows.length ? rows[0] : null
+  }
+
 }
 
 module.exports = EmployeeServices;

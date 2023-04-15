@@ -45,6 +45,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use((_, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+});
+
 //session / redis
 app.set('trust proxy', 1);
 
@@ -78,7 +85,7 @@ app.use((req, res, next) => {
     req.log.info(req.method + ' ' + req.url);
     req.on("finish", () => req.log.info(res.statusCode));
 
-    if (req.user || req.url.startsWith('/login') || req.url.startsWith('/auth')) {
+    if (req.user || req.url.startsWith('/login') || req.url.startsWith('/auth') || req.url.startsWith('/employee/email') ) {
         next();
     } else {
     res.redirect('/login');

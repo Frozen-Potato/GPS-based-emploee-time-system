@@ -1,4 +1,7 @@
 <div class="container-xxl">
+    <div>
+        <button id="addNew" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New</button>
+    </div>
     <table id="adminData" class="table table-row-bordered gs-7 gy-7 gx-7">
         <thead>
             <tr class="fw-semibold fs-6 text-muted">
@@ -20,9 +23,10 @@
                   <td><%= admin.role %></td>
                   <td><%= admin.lastLogin %></td>
                   <td><%= admin.isActive %></td>
-                  <td><a class="btn btn-primary" href="/<%= admin.id %>">Details</a></td>
+                  <td><div class="d-flex justify-content-center align-content-center "><a class="btn btn-primary" href="/<%= admin.id %>">Details</a></div></td>
                 </tr>
              <% } %>
         </tbody>
     </table>  
+    <%- include('./addNew'); %>
 </div>

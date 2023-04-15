@@ -155,6 +155,13 @@ module.exports = {
           default: 'sp_team_dev.sid',
         }
       }
+    },
+    publicAPIKey : {
+      key : {
+        doc : 'key to access certain API routes',
+        format : String,
+        default : null
+      }
     }
   }
   

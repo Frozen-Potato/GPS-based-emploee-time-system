@@ -1,0 +1,95 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Add New Admin</h3>
+
+                <!--begin::Close-->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <!--end::Close-->
+            </div>
+
+            <div class="modal-body">
+                <!--begin::Form-->
+                <form id="addNewAdmin" class="form" novalidate="novalidate" action="#" autocomplete="off">
+
+                    <!--begin::Input group-->
+                    <div class="fv-row">
+                        <!--begin::Label-->
+                        <label class="required fw-semibold fs-6 mb-2">Name</label>
+                        <!--end::Label-->
+
+                        <!--begin::Input-->
+                        <input type="text" name="name" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="New Admin Name" value="" />
+                        <!--end::Input-->
+                    </div>
+                    <!--end::Input group-->
+
+                    <!--begin::Input group-->
+                    <div class="fv-row">
+                        <!--begin::Label-->
+                        <label class="required fw-semibold fs-6 mb-2">Email</label>
+                        <!--end::Label-->
+
+                        <!--begin::Input-->
+                        <input type="text" name="email" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="New Admin Email" value="" />
+                        <!--end::Input-->
+                    </div>
+                    <!--end::Input group-->
+
+                    <!--begin::Input group-->
+                    <div class="fv-row">
+                        <!--begin::Label-->
+                        <label class="required fw-semibold fs-6 mb-2">Role</label>
+                        <!--end::Label-->
+
+                        <!--begin::Input-->
+                        <input type="text" name="role" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Role" value="" />
+                        <!--end::Input-->
+                    </div>
+                    <!--end::Input group-->
+
+                    <!--begin::Input group-->
+                    <div class="fv-row">
+                        <!--begin::Label-->
+                        <label class="required fw-semibold fs-6 mb-2">Password</label>
+                        <!--end::Label-->
+
+                        <!--begin::Input-->
+                        <input type="password" name="password" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="New Admin Password" value="" />
+                        <!--end::Input-->
+                    </div>
+                    <!--end::Input group-->
+
+                    <!--begin::Input group-->
+                    <div class="fv-row">
+                        <!--begin::Label-->
+                        <label class="required fw-semibold fs-6 mb-2">Confirm Password</label>
+                        <!--end::Label-->
+
+                        <!--begin::Input-->
+                        <input type="password" name="confirmPassword" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Confirm password"" value="" />
+                        <!--end::Input-->
+                    </div>
+                    <!--end::Input group-->
+                    
+                </form>
+                <!--end::Form-->
+            </div>
+
+            <div class="modal-footer">
+                <button id="cancelButton"  type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+
+                <!--begin::Form Actions-->
+                <button id="addNewAdminSubmit" form="addNewAdmin" type="submit" class="btn btn-primary" >
+                    <span class="indicator-label">
+                        Submit
+                    </span>
+                </button>
+                <!--end::Form Actions-->
+
+            </div>
+        </div>
+    </div>
+</div>
+  
