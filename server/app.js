@@ -85,7 +85,7 @@ app.use((req, res, next) => {
     req.log.info(req.method + ' ' + req.url);
     req.on("finish", () => req.log.info(res.statusCode));
 
-    if (req.user || req.url.startsWith('/login') || req.url.startsWith('/auth') || req.url.startsWith('/employee/email') ) {
+    if (req.user || req.url.startsWith('/login') || req.url.startsWith('/auth') || req.url.startsWith('/employee')) {
         next();
     } else {
     res.redirect('/login');
